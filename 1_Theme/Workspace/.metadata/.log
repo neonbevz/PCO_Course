@@ -27,3 +27,133 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-09-24 22:04:39.572
 !MESSAGE Indexed 'Cirlce_Lights' (19 sources, 26 headers) in 2,44 sec: 2 289 declarations; 18 047 references; 3 unresolved inclusions; 18 syntax errors; 2 666 unresolved names (12%)
+!SESSION 2017-09-25 09:50:36.822 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -data /Users/DrButthurt/PCO_Course/1_Theme/Workspace -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-09-25 09:50:54.855
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2017-09-25 09:50:57.228
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-09-25 09:51:37.898
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-09-25 09:51:37.947
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY fr.ac6.mcu.ide 1 1 2017-09-25 09:52:04.092
+!MESSAGE Started RMI Server, listening on port 21113
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-09-25 09:52:48.753
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-09-25 09:52:48.836
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY fr.ac6.mcu.debug 4 5012 2017-09-25 10:04:02.907
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-09-25 10:04:02.950
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: Connection reset by peer.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY fr.ac6.mcu.debug 4 5012 2017-09-25 10:04:03.002
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
+	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-09-25 10:04:03.002
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:3333
+
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: Connection reset by peer.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+!SESSION 2017-09-25 15:53:51.863 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-09-25 15:54:15.449
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-09-25 15:54:40.139
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-09-25 15:54:40.178
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY fr.ac6.mcu.ide 1 1 2017-09-25 15:55:02.552
+!MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-09-25 15:55:44.510
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-09-25 15:55:44.512
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-09-25 18:38:08.333
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2017-09-25 18:38:08.333
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-09-25 18:38:08.430
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@57d6b612): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2017-09-25 18:38:08.430
+!MESSAGE Context cannot be suspended.
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-09-25 18:38:09.849
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
