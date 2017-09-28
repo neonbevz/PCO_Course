@@ -1,6 +1,6 @@
-15:55:53 **** Incremental Build of configuration Debug for project Cirlce_Lights ****
+12:43:47 **** Incremental Build of configuration Debug for project Cirlce_Lights ****
 make all 
 make: Nothing to be done for `all'.
 
-15:55:53 Build Finished (took 86ms)
+12:43:47 Build Finished (took 518ms)
 

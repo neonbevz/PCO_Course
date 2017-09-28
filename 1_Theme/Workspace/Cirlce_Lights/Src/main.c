@@ -67,37 +67,37 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	int pins[8] = {GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11, GPIO_PIN_12, GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_15};
-	int curr = 0;
-	void toogle(int pin) {
-		int pin_off = pin + 4;
-		if (pin_off > 7) {
-					pin_off -= 8;
-				}
-		HAL_GPIO_WritePin(GPIOE, pins[pin], GPIO_PIN_SET);
+		int pins[8] = {GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11, GPIO_PIN_12, GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_15};
+		int curr = 0;
+		void toogle(int pin) {
+			int pin_off = pin + 4;
+			if (pin_off > 7) {
+						pin_off -= 8;
+					}
+			HAL_GPIO_WritePin(GPIOE, pins[pin], GPIO_PIN_SET);
 
-		HAL_GPIO_WritePin(GPIOE, pins[pin_off], GPIO_PIN_RESET);
-	}
+			HAL_GPIO_WritePin(GPIOE, pins[pin_off], GPIO_PIN_RESET);
+		}
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
-  SystemClock_Config();
+	  SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+	  MX_GPIO_Init();
 
   /* USER CODE BEGIN 2 */
 
@@ -105,15 +105,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  if (curr > 7) {
-		  curr -= 8;
-	  }
-	  toogle(curr);
-	  curr++;
-	  HAL_Delay(100);
+	  while (1)
+	  {
+		  if (curr > 7) {
+			  curr -= 8;
+		  }
+		  toogle(curr);
+		  curr++;
+		  HAL_Delay(100);
   /* USER CODE END WHILE */
+
 
   /* USER CODE BEGIN 3 */
 
