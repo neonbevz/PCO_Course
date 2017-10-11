@@ -1,0 +1,22 @@
+!SESSION 2017-10-11 18:38:01.112 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/DrButthurt/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-10-11 18:38:37.862
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-10-11 18:39:13.380
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-10-11 18:39:13.649
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY fr.ac6.mcu.ide 1 1 2017-10-11 18:39:34.598
+!MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-11 18:41:12.258
+!MESSAGE Indexed 'Morse' (19 sources, 62 headers) in 14.1 sec: 3,680 declarations; 23,405 references; 0 unresolved inclusions; 26 syntax errors; 0 unresolved names (0%)
