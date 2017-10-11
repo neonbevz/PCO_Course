@@ -92,42 +92,29 @@ int main(void)
 		pins_off();
 	}
 	void letter(char let) {
-		switch(let){
-			case 'a' :
-				int symbols[] = {0, 1};
-				break;
-			case 'd' :
-				int symbols[] = {1, 0, 0};
-				break;
-			case 'r' :
-				int symbols[] = {0, 1, 0};
-				break;
-			case 'i' :
-				int symbols[] = {0, 0};
-				break;
-			case 'y' :
-				int symbols[] = {1, 0, 1, 1};
-				break;
-			case 'n' :
-				int symbols[] = {1, 0};
-				break;
-			case ' ' :
-				int symbols[] = {0, 0, 0, 0};
-				break;
-			case 'b' :
-				int symbols[] = {1, 0, 0, 0};
-				break;
-			case 'e' :
-				int symbols[] = {0};
-				break;
-			case 'v' :
-				int symbols[] = {0, 0, 0, 1};
-				break;
-			case 'z' :
-				int symbols[] = {1, 1, 0, 0};
-				break;
-			default :
-				int symbols[] = {};
+		int symbols[] = {};
+		if (let == 'a') {
+			int symbols[2] = {0, 1};
+		} else if (let == 'd') {
+			int symbols[3] = {1, 0, 0};
+		} else if (let == 'r') {
+			int symbols[3] = {0, 1, 0};
+		} else if (let == 'i') {
+			int symbols[2] = {0, 0};
+		} else if (let == 'y') {
+			int symbols[4] = {1, 0, 1, 1};
+		} else if (let == 'n') {
+			int symbols[2] = {1, 0};
+		} else if (let == ' ') {
+			int symbols[4] = {0, 0, 0, 0};
+		} else if (let == 'b') {
+			int symbols[4] = {1, 0, 0, 0};
+		} else if (let == 'e') {
+			int symbols[1] = {0};
+		} else if (let == 'v') {
+			int symbols[4] = {0, 0, 0, 1};
+		} else if (let == 'z') {
+			int symbols[4] = {1, 1, 0, 0};
 		}
 		for (int i=0; i<sizeof(symbols); i++) {
 			if (i>0) {
@@ -172,9 +159,9 @@ int main(void)
 	  char name[] = {'a', 'd', 'r', 'i', 'y', 'a', 'n', ' ', 'b', 'e', 'v', 'z',};
 	  for (int i=1; i<sizeof(name); i++) {
 		  letter(name[i]);
-		  HAL_DELAY(300);
+		  HAL_Delay(300);
 	  }
-	  HAL_DELAY(5000);
+	  HAL_Delay(5000);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
