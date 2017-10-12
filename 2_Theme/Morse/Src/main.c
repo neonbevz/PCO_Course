@@ -39,6 +39,7 @@
 #include "main.h"
 #include "stm32f3xx_hal.h"
 #include "gpio.h"
+#include <string.h>
 
 /* USER CODE BEGIN Includes */
 
@@ -92,40 +93,22 @@ int main(void)
 		pins_off();
 	}
 	void letter(char let) {
-		int symbols[] = {};
-		if (let == 'a') {
-			int symbols[2] = {0, 1};
-		} else if (let == 'd') {
-			int symbols[3] = {1, 0, 0};
-		} else if (let == 'r') {
-			int symbols[3] = {0, 1, 0};
-		} else if (let == 'i') {
-			int symbols[2] = {0, 0};
-		} else if (let == 'y') {
-			int symbols[4] = {1, 0, 1, 1};
-		} else if (let == 'n') {
-			int symbols[2] = {1, 0};
-		} else if (let == ' ') {
-			int symbols[4] = {0, 0, 0, 0};
-		} else if (let == 'b') {
-			int symbols[4] = {1, 0, 0, 0};
-		} else if (let == 'e') {
-			int symbols[1] = {0};
-		} else if (let == 'v') {
-			int symbols[4] = {0, 0, 0, 1};
-		} else if (let == 'z') {
-			int symbols[4] = {1, 1, 0, 0};
-		}
-		for (int i=0; i<sizeof(symbols); i++) {
-			if (i>0) {
-				HAL_Delay(100);
-			}
-			if (symbols[i]) {
-				dash();
-			} else {
-				dot();
+		char morse[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+		if (let == 32) {
+			HAL_Delay(700);
+		} else {
+			for (int i=0; i<strlen(morse[let-97]); i++) {
+				if (i>0) {
+					HAL_Delay(100);
+				}
+				if (morse[let-97][i] == '-') {
+					dash();
+				} else if (morse[let-97][i] == '.') {
+					dot();
+				}
 			}
 		}
+//		char[] symbols = morse[let-97];
 	}
   /* USER CODE END 1 */
 

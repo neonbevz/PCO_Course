@@ -1,600 +1,299 @@
-19:09:26 **** Build of configuration Debug for project Morse ****
+11:03:02 **** Build of configuration Debug for project ReversiveLights ****
 make all 
 Building file: ../startup/startup_stm32f303xc.s
 Invoking: MCU GCC Assembler
-/Users/DrButthurt/PCO_Course/Workspace/Morse/Debug
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32f303xc.o" "../startup/startup_stm32f303xc.s"
 Finished building: ../startup/startup_stm32f303xc.s
  
 Building file: ../Src/gpio.c
 Invoking: MCU GCC Compiler
-/Users/DrButthurt/PCO_Course/Workspace/Morse/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" -o "Src/gpio.o" "../Src/gpio.c"
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" -o "Src/gpio.o" "../Src/gpio.c"
 Finished building: ../Src/gpio.c
  
 Building file: ../Src/main.c
 Invoking: MCU GCC Compiler
-/Users/DrButthurt/PCO_Course/Workspace/Morse/Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:97:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0, 1};
-     ^~~
-../Src/main.c:100:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {1, 0, 0};
-     ^~~
-../Src/main.c:100:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:97:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1};
-         ^~~~~~~
-../Src/main.c:103:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0, 1, 0};
-     ^~~
-../Src/main.c:103:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:100:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:106:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0, 0};
-     ^~~
-../Src/main.c:106:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:103:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:109:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {1, 0, 1, 1};
-     ^~~
-../Src/main.c:109:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:106:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:112:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {1, 0};
-     ^~~
-../Src/main.c:112:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:109:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:115:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0, 0, 0, 0};
-     ^~~
-../Src/main.c:115:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:112:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:118:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {1, 0, 0, 0};
-     ^~~
-../Src/main.c:118:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:115:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:121:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0};
-     ^~~
-../Src/main.c:121:9: error: redefinition of 'symbols'
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:118:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:124:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {0, 0, 0, 1};
-     ^~~
-../Src/main.c:124:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:121:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:127:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {1, 1, 0, 0};
-     ^~~
-../Src/main.c:127:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c:124:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:130:5: error: a label can only be part of a statement and a declaration is not a statement
-     int symbols[] = {};
-     ^~~
-../Src/main.c:130:9: error: redefinition of 'symbols'
-     int symbols[] = {};
-         ^~~~~~~
-../Src/main.c:127:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c:129:4: error: label at end of compound statement
-    default :
-    ^~~~~~~
-../Src/main.c:130:9: warning: unused variable 'symbols' [-Wunused-variable]
-     int symbols[] = {};
-         ^~~~~~~
-../Src/main.c:132:26: error: 'symbols' undeclared (first use in this function)
-   for (int i=0; i<sizeof(symbols); i++) {
-                          ^~~~~~~
-../Src/main.c:132:26: note: each undeclared identifier is reported only once for each function it appears in
-../Src/main.c: In function 'main':
-../Src/main.c:175:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-make: *** [Src/main.o] Error 1
-22:36:10 **** Build of configuration Debug for project Morse ****
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:74:4: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+    swap();
+    ^~~~
+../Src/main.c: At top level:
+../Src/main.c:80:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:74:4: note: previous implicit declaration of 'swap' was here
+    swap();
+    ^~~~
+Finished building: ../Src/main.c
+ 
+Building file: ../Src/stm32f3xx_hal_msp.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_hal_msp.d" -MT"Src/stm32f3xx_hal_msp.o" -o "Src/stm32f3xx_hal_msp.o" "../Src/stm32f3xx_hal_msp.c"
+Finished building: ../Src/stm32f3xx_hal_msp.c
+ 
+Building file: ../Src/stm32f3xx_it.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" -o "Src/stm32f3xx_it.o" "../Src/stm32f3xx_it.c"
+Finished building: ../Src/stm32f3xx_it.c
+ 
+Building file: ../Src/system_stm32f3xx.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" -o "Src/system_stm32f3xx.o" "../Src/system_stm32f3xx.c"
+Finished building: ../Src/system_stm32f3xx.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5676	     52	   1580	   7308	   1c8c	ReversiveLights.elf
+ 
+11:03:22 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+make: Nothing to be done for `all'.
+13:35:31 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+make: Nothing to be done for `all'.
+13:36:40 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:74:4: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+    swap();
+    ^~~~
+../Src/main.c: At top level:
+../Src/main.c:80:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:74:4: note: previous implicit declaration of 'swap' was here
+    swap();
+    ^~~~
+Finished building: ../Src/main.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5720	     52	   1580	   7352	   1cb8	ReversiveLights.elf
+ 
+13:37:15 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:74:4: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+    swap();
+    ^~~~
+../Src/main.c: At top level:
+../Src/main.c:80:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:74:4: note: previous implicit declaration of 'swap' was here
+    swap();
+    ^~~~
+Finished building: ../Src/main.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5716	     52	   1580	   7348	   1cb4	ReversiveLights.elf
+ 
+13:38:55 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:72:3: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+   swap();
+   ^~~~
+../Src/main.c: At top level:
+../Src/main.c:81:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:72:3: note: previous implicit declaration of 'swap' was here
+   swap();
+   ^~~~
+Finished building: ../Src/main.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5700	     52	   1580	   7332	   1ca4	ReversiveLights.elf
+ 
+13:39:16 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+make: Nothing to be done for `all'.
+13:39:41 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:72:3: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+   swap();
+   ^~~~
+../Src/main.c: At top level:
+../Src/main.c:81:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:72:3: note: previous implicit declaration of 'swap' was here
+   swap();
+   ^~~~
+Finished building: ../Src/main.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5700	     52	   1580	   7332	   1ca4	ReversiveLights.elf
+ 
+13:41:23 **** Build of configuration Debug for project Morse ****
 make all 
 Building file: ../startup/startup_stm32f303xc.s
 Invoking: MCU GCC Assembler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
 arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32f303xc.o" "../startup/startup_stm32f303xc.s"
 Finished building: ../startup/startup_stm32f303xc.s
  
 Building file: ../Src/gpio.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" -o "Src/gpio.o" "../Src/gpio.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" -o "Src/gpio.o" "../Src/gpio.c"
 Finished building: ../Src/gpio.c
  
 Building file: ../Src/main.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:97:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0, 1};
-          ^~~~~~~
-../Src/main.c:100:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {1, 0, 0};
-          ^~~~~~~
-../Src/main.c:103:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0, 1, 0};
-          ^~~~~~~
-../Src/main.c:106:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0, 0};
-          ^~~~~~~
-../Src/main.c:109:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {1, 0, 1, 1};
-          ^~~~~~~
-../Src/main.c:112:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {1, 0};
-          ^~~~~~~
-../Src/main.c:115:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0, 0, 0, 0};
-          ^~~~~~~
-../Src/main.c:118:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {1, 0, 0, 0};
-          ^~~~~~~
-../Src/main.c:121:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0};
-          ^~~~~~~
-../Src/main.c:124:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {0, 0, 0, 1};
-          ^~~~~~~
-../Src/main.c:127:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {1, 1, 0, 0};
-          ^~~~~~~
-../Src/main.c:130:10: warning: unused variable 'symbols' [-Wunused-variable]
-     {int symbols[] = {};
-          ^~~~~~~
-../Src/main.c:133:26: error: 'symbols' undeclared (first use in this function)
-   for (int i=0; i<sizeof(symbols); i++) {
-                          ^~~~~~~
-../Src/main.c:133:26: note: each undeclared identifier is reported only once for each function it appears in
-../Src/main.c: In function 'main':
-../Src/main.c:176:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-22:37:39 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:98:14: error: expected expression before ']' token
-     {symbols[] = {0, 1};
-              ^
-../Src/main.c:101:14: error: expected expression before ']' token
-     {symbols[] = {1, 0, 0};
-              ^
-../Src/main.c:104:14: error: expected expression before ']' token
-     {symbols[] = {0, 1, 0};
-              ^
-../Src/main.c:107:14: error: expected expression before ']' token
-     {symbols[] = {0, 0};
-              ^
-../Src/main.c:110:14: error: expected expression before ']' token
-     {symbols[] = {1, 0, 1, 1};
-              ^
-../Src/main.c:113:14: error: expected expression before ']' token
-     {symbols[] = {1, 0};
-              ^
-../Src/main.c:116:14: error: expected expression before ']' token
-     {symbols[] = {0, 0, 0, 0};
-              ^
-../Src/main.c:119:14: error: expected expression before ']' token
-     {symbols[] = {1, 0, 0, 0};
-              ^
-../Src/main.c:122:14: error: expected expression before ']' token
-     {symbols[] = {0};
-              ^
-../Src/main.c:125:14: error: expected expression before ']' token
-     {symbols[] = {0, 0, 0, 1};
-              ^
-../Src/main.c:128:14: error: expected expression before ']' token
-     {symbols[] = {1, 1, 0, 0};
-              ^
-../Src/main.c: In function 'main':
-../Src/main.c:174:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-22:38:15 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:98:16: error: expected expression before '{' token
-     {symbols = {0, 1};
-                ^
-../Src/main.c:101:16: error: expected expression before '{' token
-     {symbols = {1, 0, 0};
-                ^
-../Src/main.c:104:16: error: expected expression before '{' token
-     {symbols = {0, 1, 0};
-                ^
-../Src/main.c:107:16: error: expected expression before '{' token
-     {symbols = {0, 0};
-                ^
-../Src/main.c:110:16: error: expected expression before '{' token
-     {symbols = {1, 0, 1, 1};
-                ^
-../Src/main.c:113:16: error: expected expression before '{' token
-     {symbols = {1, 0};
-                ^
-../Src/main.c:116:16: error: expected expression before '{' token
-     {symbols = {0, 0, 0, 0};
-                ^
-../Src/main.c:119:16: error: expected expression before '{' token
-     {symbols = {1, 0, 0, 0};
-                ^
-../Src/main.c:122:16: error: expected expression before '{' token
-     {symbols = {0};
-                ^
-../Src/main.c:125:16: error: expected expression before '{' token
-     {symbols = {0, 0, 0, 1};
-                ^
-../Src/main.c:128:16: error: expected expression before '{' token
-     {symbols = {1, 1, 0, 0};
-                ^
-../Src/main.c: In function 'main':
-../Src/main.c:174:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-22:38:46 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:98:15: error: expected expression before '{' token
-     symbols = {0, 1};
-               ^
-../Src/main.c:101:15: error: expected expression before '{' token
-     symbols = {1, 0, 0};
-               ^
-../Src/main.c:104:15: error: expected expression before '{' token
-     symbols = {0, 1, 0};
-               ^
-../Src/main.c:107:15: error: expected expression before '{' token
-     symbols = {0, 0};
-               ^
-../Src/main.c:110:15: error: expected expression before '{' token
-     symbols = {1, 0, 1, 1};
-               ^
-../Src/main.c:113:15: error: expected expression before '{' token
-     symbols = {1, 0};
-               ^
-../Src/main.c:116:15: error: expected expression before '{' token
-     symbols = {0, 0, 0, 0};
-               ^
-../Src/main.c:119:15: error: expected expression before '{' token
-     symbols = {1, 0, 0, 0};
-               ^
-../Src/main.c:122:15: error: expected expression before '{' token
-     symbols = {0};
-               ^
-../Src/main.c:125:15: error: expected expression before '{' token
-     symbols = {0, 0, 0, 1};
-               ^
-../Src/main.c:128:15: error: expected expression before '{' token
-     symbols = {1, 1, 0, 0};
-               ^
-../Src/main.c: In function 'main':
-../Src/main.c:174:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-make: *** [Src/main.o] Error 1
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-22:41:09 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:100:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:97:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1};
-         ^~~~~~~
-../Src/main.c:103:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:100:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:106:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:103:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:109:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:106:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:112:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:109:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:115:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:112:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:118:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:115:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:121:9: error: redefinition of 'symbols'
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:118:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:124:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:121:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:127:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c:124:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:127:9: warning: unused variable 'symbols' [-Wunused-variable]
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c:130:26: error: 'symbols' undeclared (first use in this function)
-   for (int i=0; i<sizeof(symbols); i++) {
-                          ^~~~~~~
-../Src/main.c:130:26: note: each undeclared identifier is reported only once for each function it appears in
-../Src/main.c: In function 'main':
-../Src/main.c:173:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-make: *** [Src/main.o] Error 1
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-22:41:21 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:101:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:98:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1};
-         ^~~~~~~
-../Src/main.c:104:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:101:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0};
-         ^~~~~~~
-../Src/main.c:107:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:104:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 1, 0};
-         ^~~~~~~
-../Src/main.c:110:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:107:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0};
-         ^~~~~~~
-../Src/main.c:113:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:110:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 1, 1};
-         ^~~~~~~
-../Src/main.c:116:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:113:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0};
-         ^~~~~~~
-../Src/main.c:119:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:116:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:122:9: error: redefinition of 'symbols'
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:119:9: note: previous definition of 'symbols' was here
-     int symbols[] = {1, 0, 0, 0};
-         ^~~~~~~
-../Src/main.c:125:9: error: redefinition of 'symbols'
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:122:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0};
-         ^~~~~~~
-../Src/main.c:128:9: error: redefinition of 'symbols'
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c:125:9: note: previous definition of 'symbols' was here
-     int symbols[] = {0, 0, 0, 1};
-         ^~~~~~~
-../Src/main.c:128:9: warning: unused variable 'symbols' [-Wunused-variable]
-     int symbols[] = {1, 1, 0, 0};
-         ^~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:174:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-22:42:45 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:98:15: error: expected expression before '{' token
-     symbols = {0, 1};
-               ^
-../Src/main.c:101:15: error: expected expression before '{' token
-     symbols = {1, 0, 0};
-               ^
-../Src/main.c:104:15: error: expected expression before '{' token
-     symbols = {0, 1, 0};
-               ^
-../Src/main.c:107:15: error: expected expression before '{' token
-     symbols = {0, 0};
-               ^
-../Src/main.c:110:15: error: expected expression before '{' token
-     symbols = {1, 0, 1, 1};
-               ^
-../Src/main.c:113:15: error: expected expression before '{' token
-     symbols = {1, 0};
-               ^
-../Src/main.c:116:15: error: expected expression before '{' token
-     symbols = {0, 0, 0, 0};
-               ^
-../Src/main.c:119:15: error: expected expression before '{' token
-     symbols = {1, 0, 0, 0};
-               ^
-../Src/main.c:122:15: error: expected expression before '{' token
-     symbols = {0};
-               ^
-../Src/main.c:125:15: error: expected expression before '{' token
-     symbols = {0, 0, 0, 1};
-               ^
-../Src/main.c:128:15: error: expected expression before '{' token
-     symbols = {1, 1, 0, 0};
-               ^
-../Src/main.c: In function 'main':
-../Src/main.c:174:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-23:15:29 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'letter':
-../Src/main.c:96:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[2] = {0, 1};
-        ^~~~~~~
-../Src/main.c:98:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[3] = {1, 0, 0};
-        ^~~~~~~
-../Src/main.c:100:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[3] = {0, 1, 0};
-        ^~~~~~~
-../Src/main.c:102:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[2] = {0, 0};
-        ^~~~~~~
-../Src/main.c:104:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[4] = {1, 0, 1, 1};
-        ^~~~~~~
-../Src/main.c:106:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[2] = {1, 0};
-        ^~~~~~~
-../Src/main.c:108:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[4] = {0, 0, 0, 0};
-        ^~~~~~~
-../Src/main.c:110:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[4] = {1, 0, 0, 0};
-        ^~~~~~~
-../Src/main.c:112:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[1] = {0};
-        ^~~~~~~
-../Src/main.c:114:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[4] = {0, 0, 0, 1};
-        ^~~~~~~
-../Src/main.c:116:8: warning: unused variable 'symbols' [-Wunused-variable]
-    int symbols[4] = {1, 1, 0, 0};
-        ^~~~~~~
-../Src/main.c:118:26: error: 'symbols' undeclared (first use in this function)
-   for (int i=0; i<sizeof(symbols); i++) {
-                          ^~~~~~~
-../Src/main.c:118:26: note: each undeclared identifier is reported only once for each function it appears in
-../Src/main.c: In function 'main':
-../Src/main.c:161:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
-make: *** [Src/main.o] Error 1
-Src/subdir.mk:30: recipe for target 'Src/main.o' failed
-23:45:37 **** Incremental Build of configuration Debug for project Morse ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
 ../Src/main.c: In function 'letter':
 ../Src/main.c:97:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[2] = {0, 1};
@@ -629,161 +328,167 @@ arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D
 ../Src/main.c:117:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {1, 1, 0, 0};
         ^~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:162:5: warning: implicit declaration of function 'HAL_DELAY' [-Wimplicit-function-declaration]
-     HAL_DELAY(300);
-     ^~~~~~~~~
 Finished building: ../Src/main.c
  
 Building file: ../Src/stm32f3xx_hal_msp.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_hal_msp.d" -MT"Src/stm32f3xx_hal_msp.o" -o "Src/stm32f3xx_hal_msp.o" "../Src/stm32f3xx_hal_msp.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_hal_msp.d" -MT"Src/stm32f3xx_hal_msp.o" -o "Src/stm32f3xx_hal_msp.o" "../Src/stm32f3xx_hal_msp.c"
 Finished building: ../Src/stm32f3xx_hal_msp.c
  
 Building file: ../Src/stm32f3xx_it.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" -o "Src/stm32f3xx_it.o" "../Src/stm32f3xx_it.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" -o "Src/stm32f3xx_it.o" "../Src/stm32f3xx_it.c"
 Finished building: ../Src/stm32f3xx_it.c
  
 Building file: ../Src/system_stm32f3xx.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" -o "Src/system_stm32f3xx.o" "../Src/system_stm32f3xx.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" -o "Src/system_stm32f3xx.o" "../Src/system_stm32f3xx.c"
 Finished building: ../Src/system_stm32f3xx.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
  
 Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c"
 Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
  
 Building target: Morse.elf
 Invoking: MCU GCC Linker
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Morse.elf" @"objects.list"   -lm
-Src/main.o: In function `main':
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug/../Src/main.c:162: undefined reference to `HAL_DELAY'
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug/../Src/main.c:164: undefined reference to `HAL_DELAY'
-collect2.exe: error: ld returned 1 exit status
-makefile:35: recipe for target 'Morse.elf' failed
-make: *** [Morse.elf] Error 1
-23:47:39 **** Incremental Build of configuration Debug for project Morse ****
+Finished building target: Morse.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Morse.elf" "Morse.bin"
+arm-none-eabi-size "Morse.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5276	     12	   1572	   6860	   1acc	Morse.elf
+ 
+13:41:34 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+make: Nothing to be done for `all'.
+14:33:33 **** Incremental Build of configuration Debug for project Morse ****
 make all 
 Building file: ../Src/main.c
 Invoking: MCU GCC Compiler
-C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Morse\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'dash':
+../Src/main.c:96:17: warning: unused variable 'z' [-Wunused-variable]
+   case 5: { int z=77; }
+                 ^
 ../Src/main.c: In function 'letter':
-../Src/main.c:97:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:102:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[2] = {0, 1};
         ^~~~~~~
-../Src/main.c:99:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:104:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[3] = {1, 0, 0};
         ^~~~~~~
-../Src/main.c:101:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:106:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[3] = {0, 1, 0};
         ^~~~~~~
-../Src/main.c:103:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:108:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[2] = {0, 0};
         ^~~~~~~
-../Src/main.c:105:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:110:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {1, 0, 1, 1};
         ^~~~~~~
-../Src/main.c:107:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:112:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[2] = {1, 0};
         ^~~~~~~
-../Src/main.c:109:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:114:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {0, 0, 0, 0};
         ^~~~~~~
-../Src/main.c:111:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:116:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {1, 0, 0, 0};
         ^~~~~~~
-../Src/main.c:113:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:118:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[1] = {0};
         ^~~~~~~
-../Src/main.c:115:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:120:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {0, 0, 0, 1};
         ^~~~~~~
-../Src/main.c:117:8: warning: unused variable 'symbols' [-Wunused-variable]
+../Src/main.c:122:8: warning: unused variable 'symbols' [-Wunused-variable]
     int symbols[4] = {1, 1, 0, 0};
         ^~~~~~~
 Finished building: ../Src/main.c
@@ -793,13 +498,258 @@ Invoking: MCU GCC Linker
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Morse.elf" @"objects.list"   -lm
 Finished building target: Morse.elf
  
-make --no-print-directory post-build
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
 Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Morse.elf" "Morse.bin"
 arm-none-eabi-size "Morse.elf"
    text	   data	    bss	    dec	    hex	filename
    5276	     12	   1572	   6860	   1acc	Morse.elf
  
-23:47:44 **** Incremental Build of configuration Debug for project Morse ****
+17:25:35 **** Incremental Build of configuration Debug for project Morse ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'letter':
+../Src/main.c:95:8: error: array type has incomplete element type 'char[]'
+   char morse[][] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        ^~~~~
+../Src/main.c:95:8: note: declaration of 'morse' as multidimensional array must have bounds for all dimensions except the first
+../Src/main.c:100:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   for (int i=0; i<strlen(symbols); i++) {
+                   ^~~~~~
+../Src/main.c:100:19: warning: incompatible implicit declaration of built-in function 'strlen'
+../Src/main.c:100:19: note: include '<string.h>' or provide a declaration of 'strlen'
+../Src/main.c:95:8: warning: unused variable 'morse' [-Wunused-variable]
+   char morse[][] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        ^~~~~
+make: *** [Src/main.o] Error 1
+18:57:05 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'letter':
+../Src/main.c:99:20: error: invalid initializer
+   char symbols[] = morse[let-97];
+                    ^~~~~
+../Src/main.c:100:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   for (int i=0; i<strlen(symbols); i++) {
+                   ^~~~~~
+../Src/main.c:100:19: warning: incompatible implicit declaration of built-in function 'strlen'
+../Src/main.c:100:19: note: include '<string.h>' or provide a declaration of 'strlen'
+make: *** [Src/main.o] Error 1
+18:59:29 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'letter':
+../Src/main.c:100:20: error: invalid initializer
+   char symbols[] = morse[let-97];
+                    ^~~~~
+make: *** [Src/main.o] Error 1
+19:00:10 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'letter':
+../Src/main.c:100:7: error: expected identifier or '(' before '[' token
+   char[] symbols = morse[let-97];
+       ^
+../Src/main.c:101:26: error: 'symbols' undeclared (first use in this function)
+   for (int i=0; i<strlen(symbols); i++) {
+                          ^~~~~~~
+../Src/main.c:101:26: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:96:8: warning: unused variable 'morse' [-Wunused-variable]
+   char morse[26][5] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        ^~~~~
+make: *** [Src/main.o] Error 1
+19:00:54 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+Finished building: ../Src/main.c
+ 
+Building target: Morse.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Morse.elf" @"objects.list"   -lm
+Finished building target: Morse.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Morse.elf" "Morse.bin"
+arm-none-eabi-size "Morse.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5776	     12	   1572	   7360	   1cc0	Morse.elf
+ 
+19:01:04 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+make: Nothing to be done for `all'.
+19:09:06 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/2_Theme/Morse/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/2_Theme/Morse/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+Finished building: ../Src/main.c
+ 
+Building target: Morse.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Morse.elf" @"objects.list"   -lm
+Finished building target: Morse.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Morse.elf" "Morse.bin"
+arm-none-eabi-size "Morse.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5776	     12	   1572	   7360	   1cc0	Morse.elf
+ 
+19:09:15 **** Incremental Build of configuration Debug for project Morse ****
+make all 
+make: Nothing to be done for `all'.
+21:27:18 **** Build of configuration Debug for project External ****
+make all 
+Building file: ../startup/startup_stm32f303xc.s
+Invoking: MCU GCC Assembler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32f303xc.o" "../startup/startup_stm32f303xc.s"
+Finished building: ../startup/startup_stm32f303xc.s
+ 
+Building file: ../Src/gpio.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" -o "Src/gpio.o" "../Src/gpio.c"
+Finished building: ../Src/gpio.c
+ 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+Finished building: ../Src/main.c
+ 
+Building file: ../Src/stm32f3xx_hal_msp.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_hal_msp.d" -MT"Src/stm32f3xx_hal_msp.o" -o "Src/stm32f3xx_hal_msp.o" "../Src/stm32f3xx_hal_msp.c"
+Finished building: ../Src/stm32f3xx_hal_msp.c
+ 
+Building file: ../Src/stm32f3xx_it.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" -o "Src/stm32f3xx_it.o" "../Src/stm32f3xx_it.c"
+Finished building: ../Src/stm32f3xx_it.c
+ 
+Building file: ../Src/system_stm32f3xx.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" -o "Src/system_stm32f3xx.o" "../Src/system_stm32f3xx.c"
+Finished building: ../Src/system_stm32f3xx.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c
+ 
+Building file: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/External/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/External/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/External/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.o" "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c"
+Finished building: ../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c
+ 
+Building target: External.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "External.elf" @"objects.list"   -lm
+Finished building target: External.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "External.elf" "External.bin"
+arm-none-eabi-size "External.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5292	     12	   1572	   6876	   1adc	External.elf
+ 
+21:27:45 **** Incremental Build of configuration Debug for project External ****
+make all 
+make: Nothing to be done for `all'.

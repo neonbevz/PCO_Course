@@ -1,6 +1,6 @@
-23:47:44 **** Incremental Build of configuration Debug for project Morse ****
+19:09:15 **** Incremental Build of configuration Debug for project Morse ****
 make all 
-make: Nothing to be done for 'all'.
+make: Nothing to be done for `all'.
 
-23:47:45 Build Finished (took 426ms)
+19:09:15 Build Finished (took 193ms)
 

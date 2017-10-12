@@ -1,0 +1,34 @@
+13:39:41 **** Incremental Build of configuration Debug for project ReversiveLights ****
+make all 
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Drivers/CMSIS/Include" -I"/Users/DrButthurt/PCO_Course/Workspace/ReversiveLights/Inc"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+../Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Src/main.c:72:3: warning: implicit declaration of function 'swap' [-Wimplicit-function-declaration]
+   swap();
+   ^~~~
+../Src/main.c: At top level:
+../Src/main.c:81:6: warning: conflicting types for 'swap'
+ void swap() {
+      ^~~~
+../Src/main.c:72:3: note: previous implicit declaration of 'swap' was here
+   swap();
+   ^~~~
+Finished building: ../Src/main.c
+ 
+Building target: ReversiveLights.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ReversiveLights.elf" @"objects.list"   -lm
+Finished building target: ReversiveLights.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "ReversiveLights.elf" "ReversiveLights.bin"
+arm-none-eabi-size "ReversiveLights.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5700	     52	   1580	   7332	   1ca4	ReversiveLights.elf
+ 
+
+13:39:43 Build Finished (took 2s.110ms)
+
