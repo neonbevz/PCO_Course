@@ -903,3 +903,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY fr.ac6.mcu.debug 4 200 2017-10-26 00:09:39.668
 !MESSAGE OpenOCD Binary not found
+
+!ENTRY fr.ac6.mcu.debug 4 200 2017-10-26 00:13:38.535
+!MESSAGE OpenOCD Binary not found
+
+!ENTRY fr.ac6.mcu.debug 4 200 2017-10-26 00:13:45.996
+!MESSAGE OpenOCD Binary not found

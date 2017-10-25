@@ -164,6 +164,7 @@ int main(void)
 		  printf("Time: %lu mcs, distance: %lu mm\n", duration, duration*343/20);
 		  first_leds(duration*343/2);
 	  }
+	  error = 0;
 	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
