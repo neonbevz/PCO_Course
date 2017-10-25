@@ -1,0 +1,6 @@
+16:45:23 **** Incremental Build of configuration Debug for project Echo2 ****
+make all 
+make: Nothing to be done for `all'.
+
+16:45:23 Build Finished (took 177ms)
+

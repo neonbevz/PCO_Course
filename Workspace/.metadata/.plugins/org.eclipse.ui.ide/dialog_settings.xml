@@ -8,6 +8,10 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/DrButthurt/PCO_Course/CubeCode/Echo2"/>
+			<item value="/Users/DrButthurt/PCO_Course/CubeCode/Echo"/>
+			<item value="/Users/DrButthurt/PCO_Course/CubeCode/Distance"/>
+			<item value="/Users/DrButthurt/PCO_Course/CubeCode/External"/>
 			<item value="/Users/DrButthurt/PCO_Course/CubeCode/ExternalLed"/>
 			<item value="/Users/DrButthurt/PCO_Course/CubeCode/ReversiveLights"/>
 		</list>
