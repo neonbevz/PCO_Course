@@ -1,6 +1,23 @@
-16:45:23 **** Incremental Build of configuration Debug for project Echo2 ****
+00:09:36 **** Incremental Build of configuration Debug for project Echo2 ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../Src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Echo2\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Echo2/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Echo2/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Echo2/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Echo2/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Echo2/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
+Finished building: ../Src/main.c
+ 
+Building target: Echo2.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=rdimon.specs -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Echo2.elf" @"objects.list"   -lm
+Finished building target: Echo2.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Echo2.elf" "Echo2.bin"
+arm-none-eabi-size "Echo2.elf"
+   text	   data	    bss	    dec	    hex	filename
+  31420	   2528	   1908	  35856	   8c10	Echo2.elf
+ 
 
-16:45:23 Build Finished (took 177ms)
+00:09:37 Build Finished (took 1s.652ms)
 

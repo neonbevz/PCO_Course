@@ -62,6 +62,8 @@ void SystemClock_Config(void);
 
 /* USER CODE BEGIN 0 */
 volatile int overflows;
+int leds[8] = {GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11, GPIO_PIN_12, GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_15};
+volatile int error = 0;
 
 inline void TIM6_reinit() {
 	HAL_TIM_Base_Stop(&htim6);
@@ -81,6 +83,22 @@ inline uint32_t TIM6_time() {
 inline void TIM6_delay(uint32_t delay) {
 	uint32_t start = TIM6_time();
 	while (TIM6_time() < start + delay) {
+	}
+}
+
+void all_leds(int state) {
+	for (int i=0; i<8; i++) {
+		HAL_GPIO_WritePin(GPIOE, leds[i], state);
+	}
+}
+
+void first_leds(int num) {
+	all_leds(GPIO_PIN_RESET);
+	if (num > 8) {
+		num = 8;
+	}
+	for (int i=0; i<num; i++) {
+		HAL_GPIO_WritePin(GPIOE, leds[i], GPIO_PIN_SET);
 	}
 }
 
@@ -127,15 +145,26 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	  HAL_GPIO_WritePin(GPIOA, TRIG_Pin, GPIO_PIN_SET);
 	  TIM6_delay(16);
-	  	  HAL_GPIO_WritePin(GPIOA, TRIG_Pin, GPIO_PIN_RESET);
-	  	  while (HAL_GPIO_ReadPin(GPIOA, ECHO_Pin) == GPIO_PIN_RESET) {
-	  	  }
-	  	  uint32_t pulse_start = TIM6_time();
-	  	  while (HAL_GPIO_ReadPin(GPIOA, ECHO_Pin) == GPIO_PIN_SET) {
-	  	  }
-	  	  uint32_t duration = TIM6_time() - pulse_start;
-	  	  HAL_Delay(100);
-	  	  printf("Time: %lu mcs, distance: %lu mm\n", duration, duration*343/20);
+	  HAL_GPIO_WritePin(GPIOA, TRIG_Pin, GPIO_PIN_RESET);
+	  uint32_t wait_start = TIM6_time();
+	  while (HAL_GPIO_ReadPin(GPIOA, ECHO_Pin) == GPIO_PIN_RESET) {
+		  if (TIM6_time() - wait_start > 50) {
+			  error = 1;
+			  break;
+		  }
+	  }
+	  if (error) {
+		  printf("Error - waiting too long\n");
+		  all_leds(GPIO_PIN_SET);
+	  } else {
+		  uint32_t pulse_start = TIM6_time();
+		  while (HAL_GPIO_ReadPin(GPIOA, ECHO_Pin) == GPIO_PIN_SET) {
+		  }
+		  uint32_t duration = TIM6_time() - pulse_start;
+		  printf("Time: %lu mcs, distance: %lu mm\n", duration, duration*343/20);
+		  first_leds(duration*343/2);
+	  }
+	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 

@@ -1,0 +1,37 @@
+19:44:54 **** Incremental Build of configuration Debug for project Distance ****
+make all 
+Building file: ../Src/syscalls.c
+Invoking: MCU GCC Compiler
+C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Distance\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F303xC -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Distance/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Distance/Drivers/STM32F3xx_HAL_Driver/Inc" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Distance/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Distance/Drivers/CMSIS/Device/ST/STM32F3xx/Include" -I"C:/Users/36-83/Documents/UCU/PCO_Course/Workspace/Distance/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" -o "Src/syscalls.o" "../Src/syscalls.c"
+Finished building: ../Src/syscalls.c
+ 
+Building target: Distance.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=rdimon.specs -specs=nano.specs -u _printf_float -u _scanf_float -T"../STM32F303VCTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Distance.elf" @"objects.list"   -lm
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_lseek':
+syscalls.c:(.text._lseek+0x0): multiple definition of `_lseek'
+Src/syscalls.o:C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Distance\Debug/../Src/syscalls.c:162: first defined here
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_close':
+syscalls.c:(.text._close+0x0): multiple definition of `_close'
+Src/syscalls.o:syscalls.c:(.text._close+0x0): first defined here
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_open':
+syscalls.c:(.text._open+0x0): multiple definition of `_open'
+Src/syscalls.o:syscalls.c:(.text._open+0x0): first defined here
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_unlink':
+syscalls.c:(.text._unlink+0x0): multiple definition of `_unlink'
+Src/syscalls.o:syscalls.c:(.text._unlink+0x0): first defined here
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_times':
+syscalls.c:(.text._times+0x0): multiple definition of `_times'
+Src/syscalls.o:syscalls.c:(.text._times+0x0): first defined here
+c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\librdimon_nano.a(rdimon-syscalls.o): In function `_isatty':
+syscalls.c:(.text._isatty+0x0): multiple definition of `_isatty'
+Src/syscalls.o:syscalls.c:(.text._isatty+0x0): first defined here
+Src/syscalls.o: In function `_sbrk':
+C:\Users\36-83\Documents\UCU\PCO_Course\Workspace\Distance\Debug/../Src/syscalls.c:136: undefined reference to `__StackLimit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Distance.elf] Error 1
+makefile:35: recipe for target 'Distance.elf' failed
+
+19:44:55 Build Finished (took 999ms)
+
