@@ -102,6 +102,13 @@ void first_leds(int num) {
 	}
 }
 
+void error_leds() {
+	all_leds(GPIO_PIN_RESET);
+	for (int i=0; i<8; i+=2) {
+		HAL_GPIO_WritePin(GPIOE, leds[i], GPIO_PIN_SET);
+	}
+}
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -155,16 +162,27 @@ int main(void)
 	  }
 	  if (error) {
 		  printf("Error - waiting too long\n");
-		  all_leds(GPIO_PIN_SET);
+		  error_leds();
+		  error = 0;
 	  } else {
 		  uint32_t pulse_start = TIM6_time();
 		  while (HAL_GPIO_ReadPin(GPIOA, ECHO_Pin) == GPIO_PIN_SET) {
+			  if (TIM6_time() - pulse_start > 500000) {
+			  error = 1;
+			  break;
+			  }
 		  }
-		  uint32_t duration = TIM6_time() - pulse_start;
-		  printf("Time: %lu mcs, distance: %lu mm\n", duration, duration*343/20);
-		  first_leds(duration*343/2);
+		  if (error) {
+			  printf("Error - pulse too long\n");
+			  error_leds();
+			  error = 0;
+		  } else {
+				  uint32_t duration = TIM6_time() - pulse_start;
+				  printf("Time: %lu mcs, distance: %lu mm\n", duration, duration*343/20);
+				  first_leds(duration*343/2000);
+		  }
+
 	  }
-	  error = 0;
 	  HAL_Delay(100);
   }
   /* USER CODE END 3 */

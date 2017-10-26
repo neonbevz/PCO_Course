@@ -6,7 +6,7 @@ org.eclipse.launchbar.core.descriptorType.default\:Distance\ Run/activeLaunchMod
 org.eclipse.launchbar.core.descriptorType.default\:Distance\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Echo\ Run/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:Echo\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-org.eclipse.launchbar.core.descriptorType.default\:Echo2\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Echo2\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Echo2.elf/activeLaunchMode=profile
 org.eclipse.launchbar.core.descriptorType.default\:External\ Run/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:External\ Run/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
